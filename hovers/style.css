@@ -5,18 +5,22 @@ body{
     align-items: center;
 }
 
-.circulo{
+.circulo {
     height: 4em;
     width: 4em;
     background: red;
-    border-radius: 4em;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
 }
 
-.circulo:hover{
-    height: 4em;
-    width: 4em;
-    background: red;
-    border-radius: 4em;
-    transform: translateY(50px);
-    
+.circulo:hover {
+    animation: rebote 1s ease-in-out;
+}
+
+@keyframes rebote {
+    0% { transform: translateY(0); }
+    40% { transform: translateY(-50px); }
+    60% { transform: translateY(0); }
+    80% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
 }
